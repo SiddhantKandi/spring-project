@@ -29,7 +29,7 @@ public class SpringProjectApplication implements CommandLineRunner {
         log.info("Datasource: {}", dataSource.toString());
 
         final JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        jdbcTemplate.execute("SELECT 1"); // ✅ test query
+        jdbcTemplate.execute("SELECT 1");
         log.info("Database connection test successful!");
     }
 }
