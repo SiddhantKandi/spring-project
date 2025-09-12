@@ -50,6 +50,10 @@ public class Book {
         this.authorId = id;
     }
 
+    public void setTitle(String updated) {
+        this.title = updated;
+    }
+
     // Builder inner class
     public static class Builder {
         private String isbn;

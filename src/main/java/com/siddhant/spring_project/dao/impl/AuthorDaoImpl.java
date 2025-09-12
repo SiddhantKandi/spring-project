@@ -5,7 +5,6 @@ import com.siddhant.spring_project.domain.Author;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -46,6 +45,14 @@ public class AuthorDaoImpl implements AuthorDAO {
     public void update(long id, Author author) {
             jdbcTemplate.update("UPDATE authors SET id = ?, name = ?, age = ? WHERE id = ?",
             author.getId(),author.getName(),author.getAge(),id
+        );
+    }
+
+    @Override
+    public void delete(long id) {
+        jdbcTemplate.update(
+                "DELETE FROM authors where id = ?",
+                id
         );
     }
 
