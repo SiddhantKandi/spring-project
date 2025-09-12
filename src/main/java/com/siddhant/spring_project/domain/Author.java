@@ -38,6 +38,10 @@ public class Author {
         return age;
     }
 
+    public void setName(String updated) {
+        this.name = updated;
+    }
+
 
     // Builder inner class
     public static class Builder {
